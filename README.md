@@ -1,4 +1,5 @@
 # 1. Creación del proyecto con vite
+###### [Guia seguida](https://www.youtube.com/watch?v=rLoWMU4L_qE&ab_channel=Fazt)
 - `> npm create vite` --> Nos crea un proyecto en el que podemos seleccionar diferentes frameworks, react, vue...
     - Seleccionamos como framework `react`
     - Seleccionamos como variant `JavaScript`
