@@ -4,18 +4,18 @@
     - Seleccionamos como framework `react`
     - Seleccionamos como variant `JavaScript`
 - `> npm install` --> Instalar las dependencias
-- `> npm run dev` --> Equivalente a npm start en create-react-app
+- `> npm run dev` --> Equivalente a npm start en create-react-app (Levanta la web en local)
 
 - `> npm install -D tailwindcss postcss autoprefixer` --> Instalación de tailwindCSS
 - `> npx tailwindcss init -p` --> Inicia tailwindCSS creando dos archivos de configuración: `tailwind.config.css` y `postcss.config.css`
-    - Añadir lo siguiente al archivo tailwind.config.css sustituyendo content []
+    - Añadir lo siguiente al archivo tailwind.config.css sustituyendo **_content []_**
     ```
       content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
     ],
     ```
-    - Añadir en index.css las siguientes líneas:
+    - Añadir en **_index.css_** las siguientes líneas:
     ```
     @tailwind base;
     @tailwind components;
@@ -24,14 +24,14 @@
 
 - Para publicar la web en github pages es necesario lo siguiente:
   - Instalar: https://www.npmjs.com/package/gh-pages con el comando `> npm install gh-pages --save-dev` desde la raiz del repositorio
-  - Configurar en el archivo `vite.config.js`
+  - Configurar en el archivo **_vite.config.js_**
   ```
   export default defineConfig({
   plugins: [react()],
   base: '/react-tasks-application/'
   })
   ```
-  - Crear el archivo `deploy.sh` e introducir lo siguiente:
+  - Crear el archivo **_deploy.sh_** e introducir lo siguiente:
   ```
   #!/usr/bin/env sh
 
@@ -60,7 +60,7 @@
 
   cd -
   ```
-  - Crear un script nuevo en el `package.json`
+  - Crear un script nuevo en el **_package.json_**
   ```
   "scripts": {
     "dev": "vite",
@@ -72,4 +72,4 @@
     - `npm run build`
     - `npm run deploy`
 
-  - Por ultimo, visitar [github](https://github.com/rober12/react-tasks-application/settings/pages) la parte de _settings -> pages_ del repositorio donde aparecera el [enlace](https://rober12.github.io/react-tasks-application/) donde se ha publicado la web.
+  - Por ultimo, visitar github la parte de **_settings -> pages_** del repositorio donde aparecera el [enlace](https://rober12.github.io/react-tasks-application/) donde se ha publicado la web.
